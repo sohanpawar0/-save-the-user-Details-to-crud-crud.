@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    
+</head>
+
+<body>
+
+    <form action="savetolocalstorage">
+<label for="name">name</label>
+<input type="text" id="name" required/>
+<label for="email"></label>
+<input type="email" id="email" required/>
+<label for="phonenumber">phonenumber</label>
+<input type="tel" id="phonenumber">
+<button>submit</button>
+
+
+
+
+    </form>
+
+
+
+
+
+
+
+
+
+</body>
+ <script>
+    function savetolocalstorage(event){
+        event.preventDefault();
+        const n=event.target.name.value;
+        const e=event.target.email.value;
+        const p=event.target.phonenumber.value; 
+        localStorage.setItem('name',n);
+        localStorage.setItem('email',e);
+        localStorage.setItem('phonenumberr',p);
+        const myobj={
+            name:n,
+            email:e,
+            phonenumber:p
+        }
+
+
+    }
+ </script>
+
+</html>
